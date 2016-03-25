@@ -54,7 +54,11 @@ cp ./vimrc ~/.vimrc
 
 cd
 
-# Installing FontConfig for oh-my-zsh
+# Install Ember, Bower
+sudo npm install -g bower
+sudo npm install -g ember-cli
+
+# Install FontConfig for oh-my-zsh
 wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
 sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo fc-cache -vf
