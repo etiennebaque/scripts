@@ -10,6 +10,7 @@ sleep 2
 
 rsync -a --progress ~/Documents --exclude-from 'Backup-exclude-list' $path_on_hard_drive
 rsync -a --progress ~/madloba-documents $path_on_hard_drive
+rsync -a --progress ~/Videos $path_on_hard_drive
 rsync -a --progress ~/KeePass $path_on_hard_drive
 rsync -a --progress ~/travel $path_on_hard_drive
 rsync -a --progress --exclude='.*' ~/tig $path_on_hard_drive

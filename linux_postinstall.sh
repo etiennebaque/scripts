@@ -6,8 +6,8 @@
 # Ruby
 current_ruby_version='2.2.2'
 
-# Creates worspace folder
-mkdir ~/workspace
+# Creates codes folder
+mkdir ~/codes
 
 # Adding repositories
 sudo add-apt-repository ppa:ecometrica/servers
@@ -46,7 +46,7 @@ sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 
 # Installing vim and necessary plugins for development
 sudo apt-get install vim
-cd ~/workspace && git clone git@github.com:etiennebaque/dotitup.git
+cd ~/codes && git clone git@github.com:etiennebaque/dotitup.git
 cd dotitup
 rake
 cp ./vimrc ~/.vimrc
