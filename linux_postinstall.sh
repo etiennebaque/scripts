@@ -11,10 +11,11 @@ mkdir ~/codes
 
 # Adding repositories
 sudo add-apt-repository ppa:ecometrica/servers
+sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
+sudo apt-get update
 
 # Installing various essentials
-sudo apt-get update
-sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf
+sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk
 
 # Node packages
 curl -sL https://deb.nodesource.com/setup | sudo bash -
@@ -44,6 +45,9 @@ gem install bundler --no-ri --no-rdoc
 sudo apt-get update
 sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 
+# Installing Go
+sudo apt-get install golang
+
 # Installing vim and necessary plugins for development
 sudo apt-get install vim
 cd ~/codes && git clone git@github.com:etiennebaque/dotitup.git
@@ -65,6 +69,9 @@ wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
 sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo fc-cache -vf
 sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+
+# Compiling YouCompleteMe plugin for vim
+cd ~/.vim/plugged/YouCompleteMe && sh ./install.sh
 
 # Much needed system restart
 sudo reboot

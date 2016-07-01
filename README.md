@@ -4,7 +4,7 @@ Scripts that I use to setup my local environment and to perform various daily ta
 
 To run the post-install script:
 ```
-\curl https://raw.githubusercontent.com/etiennebaque/scripts/master/linux_postinstall.sh | bash
+\curl https://raw.githubusercontent.com/etiennebaque/scripts/master/linux_postinstall.sh | sh
 ```
 
 Licence: MIT
