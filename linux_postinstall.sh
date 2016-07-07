@@ -15,13 +15,13 @@ sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
 sudo apt-get update
 
 # Installing various essentials
-sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk
+sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk exuberant-ctags zsh
 
 # Node packages
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install -y nodejs
 
-# Installing rbenv qnd rbenv-vars
+# Installing rbenv and rbenv-vars
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
@@ -57,12 +57,12 @@ cp ./vimrc ~/.vimrc
 
 cd
 
-# Getting RubyMine
-wget 'https://download.jetbrains.com/ruby/RubyMine-2016.1.tar.gz'
-
 # Installing Ember, Bower
 sudo npm install -g bower
 sudo npm install -g ember-cli
+
+# Making ZSH my default shell
+chsh -s $(which zsh)
 
 # Installing FontConfig for oh-my-zsh
 wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
@@ -73,5 +73,12 @@ sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 # Compiling YouCompleteMe plugin for vim
 cd ~/.vim/plugged/YouCompleteMe && sh ./install.sh
 
-# Much needed system restart
-sudo reboot
+# Installing theme for vim
+mkdir ~/.vim/colors && cd ~/.vim/colors
+wget 'https://raw.githubusercontent.com/jpo/vim-railscasts-theme/master/colors/railscasts.vim'
+
+echo "------------------------------"
+echo "-- Documentation:"
+echo "-- Creating templates for git hooks: http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html"
+echo "-- Installing ZSH: https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH"
+echo "------------------------------"
