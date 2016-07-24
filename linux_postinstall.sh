@@ -15,7 +15,7 @@ sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
 sudo apt-get update
 
 # Installing various essentials
-sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk exuberant-ctags zsh
+sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk exuberant-ctags zsh htop
 
 # Node packages
 curl -sL https://deb.nodesource.com/setup | sudo bash -
@@ -60,6 +60,10 @@ cd
 # Installing Ember, Bower
 sudo npm install -g bower
 sudo npm install -g ember-cli
+
+# Installing diff-fancy
+sudo npm install -g diff-so-fancy
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 # Making ZSH my default shell
 chsh -s $(which zsh)
