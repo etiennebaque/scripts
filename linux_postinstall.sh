@@ -15,7 +15,7 @@ sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
 sudo apt-get update
 
 # Installing various essentials
-sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk exuberant-ctags zsh htop
+sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk exuberant-ctags zsh htop update-manager-core screen keepassx qt5-default libqt5webkit5-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x
 
 # Node packages
 curl -sL https://deb.nodesource.com/setup | sudo bash -
@@ -48,7 +48,7 @@ sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 # Installing Go
 sudo apt-get install golang
 
-# Installing vim and necessary plugins for development
+# Installing vim and various plugins
 sudo apt-get install vim
 cd ~/codes && git clone git@github.com:etiennebaque/dotitup.git
 cd dotitup
@@ -74,6 +74,9 @@ sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo fc-cache -vf
 sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 
+# Installing various gems
+gem install capybara-webkit
+
 # Compiling YouCompleteMe plugin for vim
 cd ~/.vim/plugged/YouCompleteMe && sh ./install.sh
 
@@ -83,6 +86,8 @@ wget 'https://raw.githubusercontent.com/jpo/vim-railscasts-theme/master/colors/r
 
 echo "------------------------------"
 echo "-- Documentation:"
-echo "-- Creating templates for git hooks: http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html"
-echo "-- Installing ZSH: https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH"
+echo "-- Create templates for git hooks: http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html"
+echo "-- Install ZSH: https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH"
+echo "-- Install Docker: https://docs.docker.com/engine/installation/linux/ubuntulinux/"
+echo "-- Install Docker compose: https://docs.docker.com/compose/install/"
 echo "------------------------------"
