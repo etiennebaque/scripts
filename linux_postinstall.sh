@@ -74,6 +74,9 @@ sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo fc-cache -vf
 sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 
+# Zsh plugin
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/psprint/zsh-navigation-tools/master/doc/install.sh)"
+
 # Installing various gems
 gem install capybara-webkit
 
