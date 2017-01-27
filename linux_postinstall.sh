@@ -87,10 +87,14 @@ cd ~/.vim/plugged/YouCompleteMe && sh ./install.sh
 mkdir ~/.vim/colors && cd ~/.vim/colors
 wget 'https://raw.githubusercontent.com/jpo/vim-railscasts-theme/master/colors/railscasts.vim'
 
+# AWS
+sudo pip install awscli
+
 echo "------------------------------"
 echo "-- Documentation:"
 echo "-- Create templates for git hooks: http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html"
 echo "-- Install ZSH: https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH"
 echo "-- Install Docker: https://docs.docker.com/engine/installation/linux/ubuntulinux/"
 echo "-- Install Docker compose: https://docs.docker.com/compose/install/"
+echo "-- Configure AWS CLI: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html"
 echo "------------------------------"
