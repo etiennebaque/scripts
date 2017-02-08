@@ -9,7 +9,8 @@ sources=("~/Documents" "~/Videos" "~/codes" "~/shared" "~/Pictures" "~/Music")
 
 for i in "${sources[@]}"
 do
-  cmd="rsync -avz --progress $i $destination"
+  # Specify another port
+  cmd="rsync -avz 'ssh -p 22' --progress $i $destination"
   eval $cmd
 done
 
