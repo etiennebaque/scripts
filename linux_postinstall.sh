@@ -6,9 +6,6 @@
 # Ruby
 current_ruby_version='2.2.2'
 
-# Creates codes folder
-mkdir ~/codes
-
 # Adding repositories
 sudo add-apt-repository ppa:ecometrica/servers
 sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
@@ -48,10 +45,10 @@ sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 # Installing Go
 sudo apt-get install golang
 
-# Installing vim and various plugins
+# Installing vim and various plugins.
 sudo apt-get install vim
-cd ~/codes && git clone git@github.com:etiennebaque/dotitup.git
-cd dotitup
+git clone git@github.com:etiennebaque/dotitup.git ~/codes/dotitup
+cd ~/codes/dotitup
 rake
 cp ./vimrc ~/.vimrc
 
