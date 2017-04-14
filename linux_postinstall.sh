@@ -87,6 +87,10 @@ wget 'https://raw.githubusercontent.com/jpo/vim-railscasts-theme/master/colors/r
 # AWS
 sudo pip install awscli
 
+# Fuzzy finder for terminal
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 echo "------------------------------"
 echo "-- Documentation:"
 echo "-- Create templates for git hooks: http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html"
