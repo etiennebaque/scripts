@@ -6,13 +6,14 @@
 
 folder="$1"
 vault="$2"
+file_split_name="$folder.tar.gz."
 
 echo "Spliting folder"
-tar -cvzf - $folder | split -b 200M - "$vault_$folder.tar.gz."
+tar -cvzf - $folder | split -b 200M - $file_split_name
 
 echo "Uploading archived splits"
 
-for f in "$vault_$1.tar.gz.*"
+for f in "$file_split_name*"
 do
   echo "Uploading $f to $vault..."
   glacier archive upload $vault $f
