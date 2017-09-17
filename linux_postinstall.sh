@@ -12,7 +12,7 @@ sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
 sudo apt-get update
 
 # Installing various essentials
-sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk exuberant-ctags zsh htop update-manager-core screen keepassx qt5-default libqt5webkit5-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x
+sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties memcached imagemagick wkhtmltopdf autoconf automake python-dev gitk redshift redshift-gtk exuberant-ctags zsh htop update-manager-core screen keepassx qt5-default libqt5webkit5-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x clang
 
 # Node packages
 curl -sL https://deb.nodesource.com/setup | sudo bash -
@@ -97,5 +97,6 @@ echo "-- Create templates for git hooks: http://tbaggery.com/2011/08/08/effortle
 echo "-- Install ZSH: https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH"
 echo "-- Install Docker: https://docs.docker.com/engine/installation/linux/ubuntulinux/"
 echo "-- Install Docker compose: https://docs.docker.com/compose/install/"
+echo "-- You Complete Me vim plugin: https://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64"
 echo "-- Configure AWS CLI: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html"
 echo "------------------------------"

@@ -5,7 +5,7 @@
 
 destination="user@host:~/backup"
 
-sources=("~/Documents" "~/Videos" "~/codes" "~/shared" "~/Pictures" "~/Music")
+sources=("~/Documents" "~/Videos" "~/src" "~/shared" "~/Pictures" "~/Music")
 
 for i in "${sources[@]}"
 do
