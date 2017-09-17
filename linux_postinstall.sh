@@ -4,7 +4,7 @@
 
 # Versions
 # Ruby
-current_ruby_version='2.2.2'
+current_ruby_version='2.3.3'
 
 # Adding repositories
 sudo add-apt-repository ppa:ecometrica/servers
@@ -45,14 +45,8 @@ sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 # Installing Go
 sudo apt-get install golang
 
-# Installing vim and various plugins.
+# Installing vim
 sudo apt-get install vim
-git clone git@github.com:etiennebaque/dotitup.git ~/codes/dotitup
-cd ~/codes/dotitup
-rake
-cp ./vimrc ~/.vimrc
-
-cd
 
 # Installing Ember, Bower
 sudo npm install -g bower
@@ -76,9 +70,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/psprint/zsh-navigation-too
 
 # Installing various gems
 gem install capybara-webkit
-
-# Compiling YouCompleteMe plugin for vim
-cd ~/.vim/plugged/YouCompleteMe && sh ./install.sh
 
 # Installing theme for vim
 mkdir ~/.vim/colors && cd ~/.vim/colors
