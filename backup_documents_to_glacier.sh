@@ -2,7 +2,7 @@
 
 ### Script that deleted backup of documents on Amazon Glacier before uploading a fresh version of this folder.
 ### Using amazon-cli as a wrapper for glacier command (https://github.com/basak/glacier-cli)
-### Run './backup_documents.sh' (http://unix.stackexchange.com/a/253900)
+### Run './backup_documents_to_glacier.sh' (http://unix.stackexchange.com/a/253900)
 
 vault="etienne_documents"
 file_split_name="documents.tar.gz."
